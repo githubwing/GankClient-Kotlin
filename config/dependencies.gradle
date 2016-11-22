@@ -1,0 +1,10 @@
+ext{
+  compileSdkVersion = 24
+  minSdkVersion = 15
+  rxjavaVersion = "1.2.0"
+  rxAndroidVersion = "1.2.1"
+  gsonVersion = "2.6.2"
+  databindingVersion = "2.2.0"
+
+
+}

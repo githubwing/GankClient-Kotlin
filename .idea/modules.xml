@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GankClient-kotlin.iml" filepath="$PROJECT_DIR$/GankClient-kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GankClient-Kotlin.iml" filepath="$PROJECT_DIR$/GankClient-Kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
