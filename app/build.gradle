@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -27,5 +28,32 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
+
+
+    def dependencies = rootProject.ext.dependencies
+
+    compile dependencies.supportDesign
+    compile dependencies.supportRecyclerview
+    compile dependencies.supportCardView
+    compile dependencies.supportMultidex
+
+//
+    compile dependencies.rxJava
+    compile dependencies.rxAndroid
+
+    compile dependencies.gson
+    compile dependencies.retrofit
+    compile dependencies.retrofitRxjavaAdapter
+    compile dependencies.retrofitGsonConverter
+    compile dependencies.okhttp3
+    compile dependencies.okhttpLoggingInterceptor
+
+    compile dependencies.glide
+    compile dependencies.dagger
+    kapt dependencies.daggerCompiler
+    provided dependencies.javaxAnnotation
+
+    // Kotlin
+//    compile dependencies.kotlinStdlib
     testCompile 'junit:junit:4.12'
 }
