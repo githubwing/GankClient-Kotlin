@@ -11,10 +11,19 @@ import javax.inject.Inject
  * Created by wing on 16-11-22.
  */
 class App :Application(){
+  init {
+    instance = this
+  }
    @Inject lateinit var mRetrofit :Retrofit
     override fun onCreate() {
         super.onCreate()
 
         DaggerApiComponent.builder().apiModule(ApiModule()).appModule(AppModule(this)).build().inject(this)
     }
+
+
+  companion object{
+    lateinit var instance : App
+
+  }
 }

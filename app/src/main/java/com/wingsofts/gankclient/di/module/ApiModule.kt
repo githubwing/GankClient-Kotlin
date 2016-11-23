@@ -1,6 +1,7 @@
 package com.wingsofts.gankclient.di.module
 
 import android.content.Context
+import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -40,7 +41,7 @@ class ApiModule {
     }
     @Provides fun provideInterceptor() :HttpLoggingInterceptor{
         val interceptor = HttpLoggingInterceptor{
-
+            msg -> Log.d("okhttp",msg)
         }
         interceptor.level = HttpLoggingInterceptor.Level.BODY
         return interceptor
