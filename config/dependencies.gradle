@@ -1,10 +1,58 @@
-ext{
+ext {
+
   compileSdkVersion = 24
   minSdkVersion = 15
-  rxjavaVersion = "1.2.0"
+  targetSdkVersion = 22
+  buildToolsVersion = '24.1.0'
+
+  supportLibVersion = "25.0.0"
+  retrofitLibVersion = "2.1.0"
+  okhttpLibVersion = "3.4.2"
+  daggerLibVersion = "2.7"
+  rxjavaLibVersion = "1.2.0"
+  rxjava2LibVersion = "2.0.0-RC2"
   rxAndroidVersion = "1.2.1"
-  gsonVersion = "2.6.2"
-  databindingVersion = "2.2.0"
+  gsonLibVersion = "2.6.2"
+  rxBindingVersion = "0.4.0"
+  superRecyclerViewVersion = "1.1.4"
+  databindingLibVersion = "2.2.0"
+  kotlinVersion = "1.0.4"
+  blockcanaryVersion = "1.3.1"
 
+  dependencies = [
+          // Dagger2
+          daggerCompiler          : "com.google.dagger:dagger-compiler:$daggerLibVersion",
+          dagger                  : "com.google.dagger:dagger:$daggerLibVersion",
+          javaxAnnotation         : 'org.glassfish:javax.annotation:10.0-b28',
 
+          // Rx
+          rxJava                  : "io.reactivex:rxjava:$rxjavaLibVersion",
+          rxAndroid               : "io.reactivex:rxandroid:$rxAndroidVersion",
+          // json
+          gson                    : "com.google.code.gson:gson:$gsonLibVersion",
+          // Http
+          retrofit                : "com.squareup.retrofit2:retrofit:$retrofitLibVersion",
+          retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$retrofitLibVersion",
+          retrofitRxjavaAdapter   : "com.squareup.retrofit2:adapter-rxjava:$retrofitLibVersion",
+          retrofitRxjava2Adapter  : 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0-RC2',
+          okhttp3                 : "com.squareup.okhttp3:okhttp:$okhttpLibVersion",
+          okhttp3_ws              : "com.squareup.okhttp3:okhttp-ws:$okhttpLibVersion",
+          okhttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$okhttpLibVersion",
+
+          glide                   : 'com.github.bumptech.glide:glide:3.7.0',
+
+          // support
+          supportAppCompat        : "com.android.support:appcompat-v7:$supportLibVersion",
+          supportDesign           : "com.android.support:design:$supportLibVersion",
+          supportRecyclerview     : "com.android.support:recyclerview-v7:$supportLibVersion",
+          supportGridlayout       : "com.android.support:gridlayout-v7:$supportLibVersion",
+          supportAnnotations      : "com.android.support:support-annotations:$supportLibVersion",
+          supportCardView         : "com.android.support:cardview-v7:$supportLibVersion",
+          supportCustomTabs       : "com.android.support:customtabs:$supportLibVersion",
+          supportMultidex         : 'com.android.support:multidex:1.0.1',
+
+          kotlinStdlib            : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+          kotlinReflect           : "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion",
+
+  ]
 }
