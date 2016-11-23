@@ -51,5 +51,8 @@ ext {
           supportCustomTabs       : "com.android.support:customtabs:$supportLibVersion",
           supportMultidex         : 'com.android.support:multidex:1.0.1',
 
+          kotlinStdlib            : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
+          kotlinReflect           : "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion",
+
   ]
 }

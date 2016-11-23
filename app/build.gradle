@@ -53,6 +53,8 @@ dependencies {
     kapt dependencies.daggerCompiler
     provided dependencies.javaxAnnotation
 
+    compile dependencies.kotlinStdlib
+
     // Kotlin
 //    compile dependencies.kotlinStdlib
     testCompile 'junit:junit:4.12'
