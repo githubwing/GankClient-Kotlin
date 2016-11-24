@@ -4,3 +4,13 @@
 
 gank.io kotlin实现的干货集中营客户端
 
+* Kotlin
+* MVP
+* Dagger2
+* Rxjava
+* DataBinding
+* Retrofit
+* Okhttp3
+* DeepLinkDispatch
+* Gson
+* Glide
