@@ -8,6 +8,7 @@ import retrofit2.Retrofit
 import javax.inject.Inject
 
 /**
+ * 
  * Created by wing on 16-11-22.
  */
 class App :Application(){
