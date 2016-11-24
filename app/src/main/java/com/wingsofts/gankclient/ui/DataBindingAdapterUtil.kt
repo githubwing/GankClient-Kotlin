@@ -1,4 +1,3 @@
-@file:JvmName("BindingAdapter")
 
 package com.wingsofts.gankclient.ui
 
@@ -9,7 +8,7 @@ import com.bumptech.glide.Glide
 /**
  * Created by wing on 11/24/16.
  */
-object BindingAdapter {
+object DataBindingAdapterUtil {
 
   @BindingAdapter("load_image")
   @JvmStatic

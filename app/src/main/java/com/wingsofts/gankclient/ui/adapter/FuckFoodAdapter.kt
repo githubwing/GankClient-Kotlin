@@ -10,7 +10,7 @@ import com.wingsofts.gankclient.databinding.ItemRandomBinding
 /**
  * Created by wing on 11/23/16.
  */
-class RandomAdapter(private val mList: List<FuckFood>) : RecyclerView.Adapter<DataBoundViewHolder<ItemRandomBinding>>() {
+class FuckFoodAdapter(private val mList: List<FuckFood>) : RecyclerView.Adapter<DataBoundViewHolder<ItemRandomBinding>>() {
   override fun getItemCount(): Int {
     return mList.size
   }
