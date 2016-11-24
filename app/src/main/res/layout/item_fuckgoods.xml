@@ -3,8 +3,8 @@
   <data>
     <import type="android.view.View"/>
     <variable
-        name="fuckfood"
-        type="com.wingsofts.gankclient.bean.FuckFood"/>
+        name="fuckgoods"
+        type="com.wingsofts.gankclient.bean.FuckGoods"/>
   </data>
   <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_marginTop="10dp"
@@ -27,26 +27,28 @@
       <TextView
           android:textColor="#000"
           android:textSize="16sp"
-          android:text="@{fuckfood.desc}"
+          android:text="@{fuckgoods.desc}"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           />
       <ImageView
-          android:visibility="@{fuckfood.hasImg()?View.VISIBLE:View.GONE}"
-          android:scaleType="centerCrop"
-          app:load_image="@{fuckfood.images[0]}"
+
+          android:layout_marginTop="10dp"
+          android:visibility="@{fuckgoods.hasImg()?View.VISIBLE:View.GONE}"
+          android:scaleType="center"
+          app:load_image="@{fuckgoods.images[0]}"
           android:layout_width="match_parent"
           android:layout_height="200dp"
           />
       <TextView
           android:layout_marginTop="10dp"
-          android:text = "@{fuckfood.createdAt}"
+          android:text = "@{fuckgoods.createdAt}"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           />
       <TextView
           android:layout_marginTop="10dp"
-          android:text="@{fuckfood.who}"
+          android:text="@{fuckgoods.who}"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           />

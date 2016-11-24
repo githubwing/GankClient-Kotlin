@@ -5,7 +5,7 @@ import java.util.*
 /**
  * Created by wing on 11/23/16.
  */
-data class FuckFood(
+ data class FuckGoods(
     val _id: String,
     val createdAt: String,
     val desc: String,

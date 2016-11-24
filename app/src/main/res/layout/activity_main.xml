@@ -15,6 +15,7 @@
 
         </com.wingsofts.gankclient.ui.widget.NoScrollViewPager>
         <android.support.design.widget.BottomNavigationView
+            app:layout_behavior="@string/bye_burger_bottom_behavior"
             android:id="@+id/navigationView"
             android:layout_gravity="bottom"
             android:layout_width="match_parent"
@@ -26,6 +27,15 @@
             >
 
         </android.support.design.widget.BottomNavigationView>
-
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingButton"
+            app:layout_behavior="@string/bye_burger_float_behavior"
+            android:layout_gravity="bottom|right"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
     </android.support.design.widget.CoordinatorLayout>
 </layout>

@@ -13,7 +13,7 @@ interface ApiComponent{
     fun inject(app: App)
 
 
-    fun plus(module:AndroidModule):AndroidComponent
+    fun plus(module: FuckGoodsModule):FuckGoodsComponent
 
 }
 
