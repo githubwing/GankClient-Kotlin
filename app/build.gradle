@@ -59,6 +59,12 @@ dependencies {
 
     compile dependencies.kotlinStdlib
     compile dependencies.kotlinReflect
+
+    //deep link
+    compile 'com.airbnb:deeplinkdispatch:2.0.1'
+    kapt 'com.airbnb:deeplinkdispatch-processor:2.0.1'
+
+
     kapt 'com.android.databinding:compiler:1.0-rc5'
     // Kotlin
 //    compile dependencies.kotlinStdlib

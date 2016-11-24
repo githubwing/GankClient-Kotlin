@@ -31,9 +31,10 @@
           android:layout_height="wrap_content"
           />
       <ImageView
-          app:load_image="@{fuckfood.images[0]}"
+          android:scaleType="centerCrop"
+          app:load_image="@{fuckfood.url}"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="200dp"
           />
       <TextView
           android:layout_marginTop="10dp"
