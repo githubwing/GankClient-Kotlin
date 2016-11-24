@@ -9,6 +9,6 @@ import rx.Observable
  * Created by wing on 11/23/16.
  */
 interface GankApi{
-  @GET("data/Android/10/1")
+  @GET("random/data/Android/20")
   fun getData():Observable<JsonResult<List<FuckFood>>>
 }
