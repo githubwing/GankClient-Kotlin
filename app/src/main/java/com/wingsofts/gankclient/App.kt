@@ -1,6 +1,7 @@
 package com.wingsofts.gankclient
 
 import android.app.Application
+import com.wingsofts.gankclient.di.component.ApiComponent
 import com.wingsofts.gankclient.di.component.DaggerApiComponent
 import com.wingsofts.gankclient.di.module.ApiModule
 import com.wingsofts.gankclient.di.module.AppModule
@@ -10,11 +11,12 @@ import javax.inject.Inject
 /**
  * Created by wing on 16-11-22.
  */
-class App :Application(){
-  init {
-    instance = this
-  }
-   @Inject lateinit var mRetrofit :Retrofit
+class App : Application() {
+    init {
+        instance = this
+    }
+
+    @Inject lateinit var apiComponent: ApiComponent
     override fun onCreate() {
         super.onCreate()
 
@@ -22,8 +24,8 @@ class App :Application(){
     }
 
 
-  companion object{
-    lateinit var instance : App
+    companion object {
+        lateinit var instance: App
 
-  }
+    }
 }

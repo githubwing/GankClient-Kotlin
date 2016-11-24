@@ -8,12 +8,12 @@
         android:layout_height="match_parent"
         tools:context="com.wingsofts.gankclient.ui.activity.MainActivity">
 
-        <android.support.v4.view.ViewPager
+        <com.wingsofts.gankclient.ui.widget.NoScrollViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        </android.support.v4.view.ViewPager>
+        </com.wingsofts.gankclient.ui.widget.NoScrollViewPager>
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigationView"
             android:layout_gravity="bottom"

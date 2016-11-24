@@ -17,5 +17,9 @@ data class FuckFood(
     val used: Boolean,
     val who: String
 
+){
+    fun hasImg():Boolean {
+        return images != null
+    }
 
-)
+}

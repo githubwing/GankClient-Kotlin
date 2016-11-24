@@ -2,23 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/menu_android"
         android:icon="@drawable/icon_android"
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:title="Android"/>
 
     <item
+
+        android:id="@+id/menu_ios"
         android:icon="@drawable/icon_ios"
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:title="iOS"/>
     <item
-        android:icon="@drawable/icon_meizi"
+
+        android:id="@+id/menu_girl"
+        android:icon="@drawable/icon_girl"
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:title="妹子"
         />
     <item
+
+        android:id="@+id/menu_about"
         android:icon="@drawable/icon_about"
         android:enabled="true"
         app:showAsAction="ifRoom"

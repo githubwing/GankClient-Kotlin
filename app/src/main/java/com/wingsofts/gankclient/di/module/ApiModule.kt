@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.wingsofts.gankclient.api.GankApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -48,5 +49,7 @@ class ApiModule {
     }
 
     @Provides fun provideGson() = GsonBuilder().create()
+
+    @Provides fun provideApi(retrofit:Retrofit) = retrofit.create(GankApi::class.java)
 }
 

@@ -3,6 +3,7 @@ package com.wingsofts.gankclient.api
 import com.wingsofts.gankclient.bean.FuckFood
 import com.wingsofts.gankclient.bean.JsonResult
 import retrofit2.http.GET
+import retrofit2.http.Path
 import rx.Observable
 
 /**
@@ -11,8 +12,9 @@ import rx.Observable
 interface GankApi{
 
   /**
-   * 手气不错 随机接口
+   * Android所有数据
    */
-  @GET("random/data/福利/20")
-  fun getData():Observable<JsonResult<List<FuckFood>>>
+  @GET("data/Android/10/{page}")
+  fun getAndroidData(@Path("page") page:Int):Observable<JsonResult<List<FuckFood>>>
+
 }
