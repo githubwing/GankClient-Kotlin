@@ -9,6 +9,7 @@ import com.wingsofts.gankclient.R
 import com.wingsofts.gankclient.databinding.ActivityMainBinding
 import com.wingsofts.gankclient.ui.fragment.AndroidFragment
 import com.wingsofts.gankclient.ui.fragment.FragmentHolder
+import com.wingsofts.gankclient.ui.fragment.GirlFragment
 import com.wingsofts.gankclient.ui.fragment.IOSFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -47,7 +48,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     mFragments = ArrayList()
     mFragments.add(AndroidFragment.newInstance())
     mFragments.add(IOSFragment.newInstance())
-    mFragments.add(FragmentHolder())
+    mFragments.add(GirlFragment.newInstance())
     mFragments.add(FragmentHolder())
   }
 

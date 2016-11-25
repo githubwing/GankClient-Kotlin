@@ -21,5 +21,6 @@ import java.util.*
     fun hasImg():Boolean {
         return images != null
     }
+    fun create() = createdAt.substring(0,10)
 
 }

@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      >
-    <ImageView
+    <data>
+
+        <variable
+            name="girl"
+            type="com.wingsofts.gankclient.bean.FuckGoods" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        />
-  </LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            app:load_image = "@{girl.url}"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </LinearLayout>
 </layout>

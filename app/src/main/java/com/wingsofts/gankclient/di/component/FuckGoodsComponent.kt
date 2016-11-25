@@ -2,6 +2,7 @@ package com.wingsofts.gankclient.di.component
 
 import com.wingsofts.gankclient.mvp.contract.FuckGoodsContract
 import com.wingsofts.gankclient.ui.fragment.AndroidFragment
+import com.wingsofts.gankclient.ui.fragment.GirlFragment
 import com.wingsofts.gankclient.ui.fragment.IOSFragment
 import dagger.Module
 import dagger.Provides
@@ -14,6 +15,8 @@ import dagger.Subcomponent
 interface FuckGoodsComponent {
     fun inject(fragment: AndroidFragment)
     fun inject(fragment: IOSFragment)
+
+    fun inject(fragment: GirlFragment)
 }
 
 @Module

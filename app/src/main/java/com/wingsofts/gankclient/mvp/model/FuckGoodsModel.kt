@@ -5,6 +5,7 @@ import com.wingsofts.gankclient.bean.FuckGoods
 import com.wingsofts.gankclient.bean.JsonResult
 import com.wingsofts.gankclient.mvp.contract.FuckGoodsContract
 import com.wingsofts.gankclient.ui.fragment.AndroidFragment
+import com.wingsofts.gankclient.ui.fragment.GirlFragment
 import com.wingsofts.gankclient.ui.fragment.IOSFragment
 import rx.Observable
 import javax.inject.Inject
@@ -19,6 +20,7 @@ class FuckGoodsModel
     when (type) {
       AndroidFragment.ANDROID -> return api.getAndroidData(page)
       IOSFragment.IOS -> return api.getiOSData(page)
+      GirlFragment.GIRL -> return api.getGirlData(page)
       else -> return api.getAndroidData(page)
     }
   }

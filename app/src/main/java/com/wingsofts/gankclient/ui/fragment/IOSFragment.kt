@@ -41,7 +41,6 @@ class IOSFragment : BaseBingingFragment<ViewRecyclerBinding>() ,FuckGoodsContrac
         override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
           super.onScrolled(recyclerView, dx, dy)
           if(!recyclerView?.canScrollVertically(1)!!){
-            context.toast("第${mPage}页")
             mPresenter.getData(++mPage, IOS)
           }
         }

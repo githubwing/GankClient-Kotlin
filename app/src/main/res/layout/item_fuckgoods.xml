@@ -1,59 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
-  <data>
-    <import type="android.view.View"/>
-    <variable
-        name="fuckgoods"
-        type="com.wingsofts.gankclient.bean.FuckGoods"/>
-  </data>
-  <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_marginTop="10dp"
-      android:background="#fff"
-      android:paddingTop="10dp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      >
-    <LinearLayout
-        android:paddingRight="16dp"
-        android:paddingLeft="16dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fuckgoods"
+            type="com.wingsofts.gankclient.bean.FuckGoods" />
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
-      <TextView
-          android:textColor="#000"
-          android:textSize="16sp"
-          android:text="@{fuckgoods.desc}"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          />
-      <ImageView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
 
-          android:layout_marginTop="10dp"
-          android:visibility="@{fuckgoods.hasImg()?View.VISIBLE:View.GONE}"
-          android:scaleType="center"
-          app:load_image="@{fuckgoods.images[0]}"
-          android:layout_width="match_parent"
-          android:layout_height="200dp"
-          />
-      <TextView
-          android:layout_marginTop="10dp"
-          android:text = "@{fuckgoods.createdAt}"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          />
-      <TextView
-          android:layout_marginTop="10dp"
-          android:text="@{fuckgoods.who}"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fuckgoods.desc}"
+                android:textColor="#000"
+                android:textSize="16sp" />
 
-    </LinearLayout>
+            <ImageView
 
-  </android.support.v7.widget.CardView>
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="center"
+                android:visibility="@{fuckgoods.hasImg()?View.VISIBLE:View.GONE}"
+                app:load_image="@{fuckgoods.images[0]}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="@{fuckgoods.who}"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text = "@{fuckgoods.create()}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 </layout>
