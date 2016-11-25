@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.AboutActivity"></activity>
+        <activity android:name=".ui.activity.AboutActivity" />
         <activity
             android:name="com.airbnb.deeplinkdispatch.DeepLinkActivity"
             android:theme="@android:style/Theme.NoDisplay">
@@ -31,7 +31,8 @@
                 <data android:scheme="gank" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.ImageActivity"></activity>
+        <activity android:name=".ui.activity.ImageActivity" />
+        <activity android:name=".ui.activity.DetailActivity"></activity>
     </application>
 
 </manifest>

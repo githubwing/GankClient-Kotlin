@@ -10,18 +10,16 @@ import com.wingsofts.gankclient.databinding.ItemGirlBinding
 /**
  * Created by wing on 16-11-25.
  */
-class GirlAdapter(private val mList: List<FuckGoods>) : RecyclerView.Adapter<DataBoundViewHolder<ItemGirlBinding>>() {
-    var mListener: ((pos: Int) -> Unit)? = null
+class GirlAdapter(private val mList: List<FuckGoods>) : BaseBindingAdapter<ItemGirlBinding>() {
     override fun getItemCount(): Int {
         return mList.size
     }
 
     override fun onBindViewHolder(holder: DataBoundViewHolder<ItemGirlBinding>, position: Int) {
+        super.onBindViewHolder(holder, position)
         holder.binding.girl = mList[holder.adapterPosition]
 
-        holder.binding.root.setOnClickListener {
-            mListener?.invoke(holder.adapterPosition)
-        }
+
         holder.binding.executePendingBindings()
     }
 
@@ -31,7 +29,5 @@ class GirlAdapter(private val mList: List<FuckGoods>) : RecyclerView.Adapter<Dat
                 ItemGirlBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
-    fun setOnItemClickListener(listener: ((pos: Int) -> Unit)) {
-        mListener = listener
-    }
+
 }

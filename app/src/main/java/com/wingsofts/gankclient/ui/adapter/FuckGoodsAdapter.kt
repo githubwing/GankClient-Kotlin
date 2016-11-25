@@ -10,12 +10,13 @@ import com.wingsofts.gankclient.databinding.ItemFuckgoodsBinding
 /**
  * Created by wing on 11/23/16.
  */
-class FuckGoodsAdapter(private val mList: List<FuckGoods>) : RecyclerView.Adapter<DataBoundViewHolder<ItemFuckgoodsBinding>>() {
+class FuckGoodsAdapter(private val mList: List<FuckGoods>) :BaseBindingAdapter<ItemFuckgoodsBinding>() {
   override fun getItemCount(): Int {
     return mList.size
   }
 
   override fun onBindViewHolder(holder: DataBoundViewHolder<ItemFuckgoodsBinding>, position: Int) {
+    super.onBindViewHolder(holder, position)
     holder.binding.fuckgoods = mList[position]
     holder.binding.executePendingBindings()
   }

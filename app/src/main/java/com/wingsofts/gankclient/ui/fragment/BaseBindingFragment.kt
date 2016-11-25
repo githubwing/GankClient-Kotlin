@@ -3,6 +3,7 @@ package com.wingsofts.gankclient.ui.fragment
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,12 +16,12 @@ abstract class BaseBingingFragment<B:ViewDataBinding> : Fragment(){
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         mBinding = createDataBinding(inflater,container,savedInstanceState)
         initView()
+        Log.e("wing","onCreateView" + javaClass.name)
         return mBinding.root
 
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-
         super.onViewCreated(view, savedInstanceState)
     }
 

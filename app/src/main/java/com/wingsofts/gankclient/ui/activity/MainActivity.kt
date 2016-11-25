@@ -16,7 +16,6 @@ import java.util.*
 
 class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
   lateinit var mFragments: MutableList<Fragment>
-  var mPreItem: MenuItem? = null
   override fun createDataBinding(savedInstanceState: Bundle?): ActivityMainBinding {
     return DataBindingUtil.setContentView(this, R.layout.activity_main)
   }
@@ -28,6 +27,8 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
       override fun getItem(position: Int) = mFragments[position]
       override fun getCount() = mFragments.size
     }
+
+    viewPager.offscreenPageLimit = 4
 
     navigationView.setOnNavigationItemSelectedListener { item ->
       var tab = 0
