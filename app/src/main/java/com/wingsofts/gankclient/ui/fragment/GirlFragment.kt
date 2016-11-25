@@ -71,6 +71,12 @@ class GirlFragment : BaseBingingFragment<ViewRecyclerBinding>(), FuckGoodsContra
         }
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mPresenter.unSubscribe()
+    }
+
     override fun setData(results: List<FuckGoods>) {
 
         mList.addAll(results)

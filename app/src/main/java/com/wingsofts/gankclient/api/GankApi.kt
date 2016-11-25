@@ -29,4 +29,11 @@ interface GankApi{
   @GET("data/福利/10/{page}")
   fun getGirlData(@Path("page") page:Int):Observable<JsonResult<List<FuckGoods>>>
 
+
+  /**
+   * 手气不错
+   */
+
+  @GET("random/data/{type}/1")
+  fun getRandom(@Path("type") type:String):Observable<JsonResult<List<FuckGoods>>>
 }

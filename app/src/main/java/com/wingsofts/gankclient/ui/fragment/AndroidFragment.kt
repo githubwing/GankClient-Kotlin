@@ -51,7 +51,6 @@ class AndroidFragment : BaseBingingFragment<ViewRecyclerBinding>(), FuckGoodsCon
         with(mBinding!!) {
             recyclerView.adapter = mAdapter
             recyclerView.layoutManager = LinearLayoutManager(context)
-            val manager = recyclerView.layoutManager as LinearLayoutManager
 
             recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
@@ -67,7 +66,6 @@ class AndroidFragment : BaseBingingFragment<ViewRecyclerBinding>(), FuckGoodsCon
             })
         }
 
-        context.toast(this.toString())
         mPresenter.getData(mPage, ANDROID)
 
         mAdapter.setOnItemClickListener {

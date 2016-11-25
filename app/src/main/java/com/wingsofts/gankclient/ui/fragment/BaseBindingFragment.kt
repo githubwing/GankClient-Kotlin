@@ -16,7 +16,6 @@ abstract class BaseBingingFragment<B:ViewDataBinding> : Fragment(){
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         mBinding = createDataBinding(inflater,container,savedInstanceState)
         initView()
-        Log.e("wing","onCreateView" + javaClass.name)
         return mBinding.root
 
     }

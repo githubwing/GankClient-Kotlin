@@ -14,6 +14,6 @@ interface ApiComponent{
 
 
     fun plus(module: FuckGoodsModule):FuckGoodsComponent
-
+    fun plus(module: RandomModule):RandomComponent
 }
 
