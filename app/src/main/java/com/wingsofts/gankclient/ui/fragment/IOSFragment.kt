@@ -11,8 +11,11 @@ import com.wingsofts.gankclient.di.component.FuckGoodsModule
 import com.wingsofts.gankclient.getMainComponent
 import com.wingsofts.gankclient.mvp.contract.FuckGoodsContract
 import com.wingsofts.gankclient.mvp.presenter.FuckGoodsPresenter
+import com.wingsofts.gankclient.router.GankClientUri
+import com.wingsofts.gankclient.router.GankRouter
 import com.wingsofts.gankclient.toast
 import com.wingsofts.gankclient.ui.adapter.FuckGoodsAdapter
+import java.net.URLEncoder
 import java.util.*
 import javax.inject.Inject
 
@@ -51,6 +54,12 @@ class IOSFragment : BaseBingingFragment<ViewRecyclerBinding>() ,FuckGoodsContrac
       })
 
       mPresenter.getData(mPage,IOS)
+    }
+
+    mAdapter.setOnItemClickListener {
+      pos ->
+      val url = URLEncoder.encode(mList[pos].url)
+      GankRouter.router(context, GankClientUri.DETAIL + url)
     }
 
   }
