@@ -36,6 +36,7 @@ gank.io kotlin实现的干货集中营客户端
   * View -- 用于把数据展示，并且提供交互。
   * Presenter -- View和Model交互的桥梁，二者通过Presenter建立联系。
 
+  主要流程如下： 用户与View交互，View得知用户需要加载数据，告知Presenter，Presenter则告知Model，Model拿到数据反交于Prsenter，Presenter将数据交给View进行展示。
 
 ## Dagger2
 
