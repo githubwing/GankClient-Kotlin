@@ -28,11 +28,12 @@
 
         </android.support.design.widget.BottomNavigationView>
         <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/random"
             android:id="@+id/floatingButton"
             app:layout_behavior="@string/bye_burger_float_behavior"
             android:layout_gravity="bottom|right"
             app:backgroundTint="@color/colorPrimary"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="70dp"
             android:layout_marginRight="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
