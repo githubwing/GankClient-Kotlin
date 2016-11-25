@@ -1,8 +1,14 @@
 # GankClient-Kotlin
 
+
+
+![image](https://github.com/githubwing/GankClient-Kotlin/raw/master/img/pic1.png)
+![image](https://github.com/githubwing/GankClient-Kotlin/raw/master/img/pic2.png)
 gank.io kotlin实现的干货集中营客户端
 
 风格采用了Material Design. 多数控件都是design包里面的。
+
+
 
 ## 项目模式
 
