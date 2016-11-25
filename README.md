@@ -1,6 +1,9 @@
 # GankClient-Kotlin
 
 
+![image](https://github.com/githubwing/GankClient-Kotlin/raw/master/img/fuckgoods.jpg)
+
+
 
 ![image](https://github.com/githubwing/GankClient-Kotlin/raw/master/img/pic1.png)
 ![image](https://github.com/githubwing/GankClient-Kotlin/raw/master/img/pic2.png)
