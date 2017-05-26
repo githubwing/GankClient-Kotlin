@@ -33,7 +33,6 @@ class ApiModule {
 
     @Provides fun provideBaseUrl() = HttpUrl.parse("http://gank.io/api/")
     @Provides fun provideOkhttp(context: Context,interceptor: HttpLoggingInterceptor): OkHttpClient {
-        Log.d("ddddd","new")
         val cacheSize = 1024 * 1024 * 10L
         val cacheDir = File(context.cacheDir, "http")
         val cache = Cache(cacheDir, cacheSize)
