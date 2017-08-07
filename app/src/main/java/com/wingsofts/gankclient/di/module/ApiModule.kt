@@ -9,7 +9,6 @@ import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
 import okhttp3.HttpUrl
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -17,13 +16,14 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import rx.schedulers.Schedulers
 import java.io.File
+import javax.inject.Singleton
 
 /**
  * Created by wing on 16-11-23.
  */
 @Module(includes = arrayOf(AppModule::class))
 class ApiModule {
-    @Provides fun provideRetrofit(baseUrl: HttpUrl, client: OkHttpClient, gson: Gson) =
+    @Provides @Singleton fun provideRetrofit(baseUrl: HttpUrl, client: OkHttpClient, gson: Gson) =
             Retrofit.Builder()
                     .client(client)
                     .baseUrl(baseUrl)
